@@ -1,0 +1,21 @@
+{
+  "name": "type-script-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "module-alias": "^2.2.2"
+  },
+  "devDependencies": {
+    "@types/module-alias": "^2.0.0",
+    "@types/node": "^14.14.10",
+    "typescript": "^4.1.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "yarn build && node dist/src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "matheus antonio da silva",
+  "license": "ISC"
+}
