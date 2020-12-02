@@ -4,14 +4,24 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@overnightjs/core": "^1.7.5",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
     "module-alias": "^2.2.2"
   },
   "devDependencies": {
+    "@types/express": "^4.17.9",
+    "@types/jest": "^26.0.16",
     "@types/module-alias": "^2.0.0",
     "@types/node": "^14.14.10",
+    "@types/supertest": "^2.0.10",
     "@typescript-eslint/eslint-plugin": "^4.8.2",
     "@typescript-eslint/parser": "^4.8.2",
     "eslint": "^7.14.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "supertest": "^6.0.1",
+    "ts-jest": "^26.4.4",
     "ts-node-dev": "^1.0.0",
     "typescript": "^4.1.2"
   },
@@ -21,7 +31,10 @@
     "lint:fix": "eslint ./src ./test --ext .ts --fix",
     "start": "yarn build && node dist/src/index.js",
     "start:dev": "ts-node-dev 'src/index.ts'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:functional": "jest --projects ./test --runInBand",
+    "style:check": "prettier --check src/**/*.ts test/**/*.ts",
+    "style:fix": "prettier --write src/**/*.ts test/**/*.ts"
   },
   "author": "matheus antonio da silva",
   "license": "ISC"
